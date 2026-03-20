@@ -47,7 +47,7 @@ app.use((err, req, res, next) => {
 async function start() {
   try {
     await runMigrations();
-    app.listen(PORT, () => {
+    app.listen(PORT,'0.0.0.0', () => {
       console.log('\n  AI Data Validator — Backend Ready (PostgreSQL)');
       console.log(`  http://localhost:${PORT}\n`);
     });
